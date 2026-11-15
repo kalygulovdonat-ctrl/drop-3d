@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>капля — сыворотки для лица</title>
+<meta name="description" content="Три сыворотки: увлажнение, питание и сияние. Ответьте на три вопроса — подберём вашу.">
+<meta name="theme-color" content="#f7efe9">
+<meta property="og:title" content="капля — сыворотки для лица">
+<meta property="og:description" content="Три сыворотки и подбор за три вопроса.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+</head>
+<body class="is-loading">
+<a class="skip" href="#rosa">Перейти к продуктам</a>
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="logo" href="#hero">капля</a>
+  <nav class="top__nav" aria-label="Основная навигация">
+    <a href="#rosa">Сыворотки</a>
+    <a href="#quiz">Подбор</a>
+    <a href="#about">Состав</a>
+  </nav>
+  <button class="bag" id="bag" type="button" aria-live="polite">Корзина · <b id="bagN">0</b></button>
+</header>
+
+<main>
+  <section class="sec sec--hero" id="hero" data-state="hero">
+    <div class="copy">
+      <p class="cap">Сыворотки для лица · 30 мл</p>
+      <h1>Одна <em>капля</em><br>утром — и&nbsp;хватит</h1>
+      <p class="lead">Три формулы без отдушек и&nbsp;лишних обещаний. Подвигайте курсором: так ведёт себя текстура на&nbsp;коже.</p>
+      <div class="actions">
+        <a class="btn" href="#quiz">Подобрать за&nbsp;3&nbsp;вопроса</a>
+        <a class="link" href="#rosa">Смотреть все</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="products"></div>
+
+  <section class="sec sec--quiz" id="quiz" data-state="quiz">
+    <div class="quiz" id="quizBox" aria-live="polite"></div>
+  </section>
+
+  <section class="sec sec--about" id="about" data-state="hero">
+    <div class="about">
+      <p class="cap">Состав</p>
+      <h2>Короткий список — <em>длинный эффект</em></h2>
+      <ul class="facts">
+        <li><b>9</b><span>ингредиентов максимум в&nbsp;формуле</span></li>
+        <li><b>0</b><span>отдушек, красителей и&nbsp;спирта</span></li>
+        <li><b>pH 5,5</b><span>как у&nbsp;здоровой кожи</span></li>
+      </ul>
+      <p class="fine">Перед применением посоветуйтесь с&nbsp;дерматологом, если кожа реактивная. © 2027 капля · <a href="mailto:hello@example.com">hello@example.com</a></p>
+    </div>
+  </section>
+</main>
+
+<p class="toast" id="toast" role="status" aria-live="polite"></p>
+<script type="module" src="main.js"></script>
+</body>
+</html>
